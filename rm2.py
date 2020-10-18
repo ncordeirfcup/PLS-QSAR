@@ -14,7 +14,7 @@ class rm2():
           scaler=MinMaxScaler()
           y=df.iloc[:,0:1]
           x=df.iloc[:,1:2]
-          try:   ##
+          try:   ##https://stackoverflow.com/questions/62561902/valueerror-illegal-value-in-4-th-argument-of-internal-none-when-running-sklearn
              mlr1=LinearRegression(fit_intercept=True,normalize=True).fit(x,y)   ##This modification is made to avoid error appers in repeated operations
           except:
              mlr1=LinearRegression(fit_intercept=True,normalize=True).fit(x,y)
